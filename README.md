@@ -2,8 +2,9 @@
 This is for exsisting codes I gotta compose in 2019 for raspberry pi 3.
 It consists of a camera controller and an image interpreter app, and ML training/test app.
 
-## Requirements 
+## Prerequisites 
 Works with OpenCV, and keras, sklearn embedded with Python 3.7.
+To dig into detail, plz hit requirements.txt
 
 ## What does it stand for?
 I want to take ownership of my learning with implementing something, or learn-by-doing.
