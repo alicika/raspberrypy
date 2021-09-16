@@ -9,10 +9,10 @@ from keras.preprocessing.image import img_to_array, load_img
 #モデル、重み、学習プロセスの読み込み
 #===================================================
 #モデルを読み込む
-model = model_from_json(open('model_fruits.json').read())
+model = model_from_json(open('model_fruits.json').read())#★
 
 #重みを読み込む
-model.load_weights('weights_fruits.h5')
+model.load_weights('weights_fruits.h5')#★
 
 #損失関数、オプティマイザを指定
 model.compile(loss='categorical_crossentropy', optimizer='adam')

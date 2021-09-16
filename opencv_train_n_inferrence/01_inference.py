@@ -8,10 +8,10 @@ from keras.preprocessing.image import img_to_array, load_img
 #モデル、重み、学習プロセスの読み込み
 #===================================================
 #モデルを読み込む
-model = model_from_json(open('model_fruits.json').read())
+model = model_from_json(open('model_coin.json').read())
 
 #重みを読み込む
-model.load_weights('weights_fruits.h5')
+model.load_weights('weights_coin.h5')
 
 #損失関数、オプティマイザを指定
 model.compile(loss='categorical_crossentropy', optimizer='adam')
@@ -20,7 +20,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam')
 #===================================================
 #推論するファイルを読み込み
 #===================================================
-filename = "cherry.jpg" #★
+filename = "" #★
 
 #32x32で画像読み込み
 x = load_img(filename, target_size=(32,32))
@@ -51,7 +51,7 @@ index = preds_argsort[0][-1]
 print("index(max) : " + str(index))
 
 #推論結果をリストから表示
-label_list = ["無し", "チェリー", "桃", "いちご"]
+label_list = ["コインなし", "1円", "5円", "10円", "50円", "100円", "500円"]
 print("予測 : " +str(label_list[index]))
 
 #推論結果の確率を表示
