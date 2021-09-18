@@ -13,7 +13,7 @@ from keras.layers import Dropout
 # 学習データ準備
 # ==================================================
 # 対象のフォルダの中にある画像を順次読み込む
-list_folder = ["0_none", "1_1yen", "2_5yen", "3_10yen", "4_50yen", "5_100yen", "6_500yen"] #★
+list_folder = ["fruits_strawberry", "fruits_peach", "fruits_cherry", "fruits_none"] #★
 x_data = []
 y_data = []
 for num, folder in enumerate(list_folder):
@@ -86,8 +86,8 @@ history = model.fit_generator(datagen.flow(x_train, y_train, batch_size=batch_si
 # ===================================================
 # モデルと重みの保存
 # ===================================================
-open('model_coin.json', 'w').write(model.to_json()) #★
-model.save_weights('weights_coin.h5') #★
+open('model_fruits.json', 'w').write(model.to_json()) #★
+model.save_weights('weights_fruits.h5') #★
 
 # ===================================================
 # グラフ出力
